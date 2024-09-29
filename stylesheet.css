@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    /*Making the body positioned relative */
+    background-color: #FADFA1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+
+    /* This is necessary to make the ::before pseudo-element render.
+     Even though we don’t want to insert any actual content, 
+     we must specify the content property to make the pseudo-element active. */
+    background-image: url("Images/rich-history-of-currencies-promo.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    /*Making the body::before positioned absolute so that it will be respective to the body */
+    top: 0;
+    left: 00;
+    width: 100%;
+    height: 100%;
+    /* Making the above 4 properties 0 and 100% to make baground image fit to the body element - here the aboslute position property helpfull*/
+    opacity: 0.4;
+    /* Adjust the opacity value */
+    z-index: -1;
+    /*This is lower index than the conten*/
+}
+
+
+.container {
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    min-height: 45vh;
+    width: 40vh;
+    z-index: 1;
+    /*This is higher index than the content - so that it will be displayed over body(-1 z index)*/
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.dropdowns {
+    margin-top: 1.5rem;
+}
+
+.inputContiner {
+    margin-top: 1rem;
+}
+
+#amountInput {
+    border: none;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    padding: 0 2rem 0 1rem;
+    box-sizing: border-box;
+    border: 0.5px solid gray;
+}
+
+.inputContiner p {
+    font-size: large;
+    font-weight: bold;
+}
+
+.inputcheck {
+    height: 0.4rem;
+    font-size: small;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+.dropdowns p {
+    font-size: large;
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.select_container {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border: 0.5px solid gray;
+}
+
+.select_container img {
+    height: 2rem;
+    padding-left: 0.25rem;
+}
+
+.select_container select {
+    border: none;
+}
+
+.arrowicon {
+    margin-top: 1rem;
+    font-size: larger;
+}
+
+.outputMessage,
+.exchange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#getExchange {
+    background-color: #921A40;
+    color: white;
+    height: 2rem;
+    width: 80%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: 0.5px solid gray;
+    border-radius: 0.5rem;
+}
+
+#getExchange:hover {
+    transform: scale(1.05);
+}
+
+.outputMessage {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.exchange {
+    display: block;
+    text-align: center;
+}

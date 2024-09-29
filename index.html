@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Currency Exchange</title>
+    <link rel="icon" href="Images/Favicon1.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <form id="currencyConverterid">
+            <div class="inputContiner">
+                <p>Enter amount : </p>
+                <input id="amountInput" name="currencyInput" type="number" min="1" value="1" required>
+                <div class="inputcheck">
+                    <span class="inputcheckmessage"></span>
+                </div>
+            </div>
+            <div class="dropdowns">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select_container">
+                        <img src="https://flagsapi.com/US/flat/64.png">
+                        <select id="fromselect"></select>
+                    </div>
+                </div>
+                <div class="arrowicon">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select_container">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select id="toselect"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="outputMessage">
+            </div>
+            <div class="exchange">
+                <button id="getExchange">Get exchange rate</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script src="codes.js"></script>
+    <script src="logic.js"></script>
+</body>
+
+</html>
